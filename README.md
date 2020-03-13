@@ -1,4 +1,4 @@
-# cis_rshiny
+# rshiny
 
 
 #### Table of Contents
@@ -38,7 +38,7 @@ sudo yum install --nogpgcheck shiny-server-1.5.12.933-x86_64.rpm
 for Ref:  A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules
 
 
-### Beginning with cis_rshiny
+### Beginning with rshiny
 
 The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
 
