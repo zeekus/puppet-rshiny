@@ -19,17 +19,11 @@
 #                            an index of the applications available in this directory will be shown.
 #
 class cis_rshiny::config {
-
-  Integer $port            = $::cis_rshiny::port,
-  String  $site_directory  = $::cis_rshiny::site_directory,
-  String  $log_directory   = $::cis_rshiny::log_directory,
-  String  $directory_index = $::cis_rshiny::directory_index
-) {
+  include cis_rshiny::params
   concat::fragment{ 'general shiny server config':
-    target  => '/etc/shiny-server/shiny-server.conf',
-    content => template('cis_rshiny/shiny-server.conf.erb'),
-    order   => '01'
+  target  => '/etc/shiny-server/shiny-server.conf',
+  #content => template('${module_name}/shiny-server-conf.erb'),
+  content => template ('/etc/puppetlabs/code/environments/production/modules/cis_rshiny/files/shiny-server-conf.erb'),
   }
 }
 
-}
